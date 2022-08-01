@@ -1,8 +1,3 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
 select 
 --from  raw orders
 o.orderid,
@@ -16,8 +11,10 @@ o.ordersellingprice,
 c.customername,
 c.segment,
 c.country,
+c.customerid,
 --from  raw product
 p.category,
+p.productid,
 p.productname,
 p.subcategory
 
